@@ -1,0 +1,104 @@
+<html>
+
+<head>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Create two equal columns that floats next to each other */
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 300px;
+        /* Should be removed. Only for demonstration */
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .button {
+
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        border-radius: 5px;
+        /* 5px rounded corners */
+    }
+
+    div1 {
+        text-align: center;
+    }
+
+    div2 {
+        text-align: left;
+    }
+</style>
+
+
+</head>
+
+<body>
+
+    <body>
+
+
+        <div1 class="header">
+            <h1>LipReading Quiz</h1>
+            <h2>Score {{data.6}}</h2>
+
+        </div1>
+
+        <div class="row">
+            <div1 class="column">
+                <video width="500" height="500" controls autoplay>
+                    <source src={{data.0}} type="video/mp4">
+
+                </video>
+            </div1>
+            <div class="column">
+
+                <div2 class="card">
+                    <form method="post">
+                        {% csrf_token %}
+                        <h2>Options</h2>
+
+                        <h1><button name="option" value={{data.1}} class="button"> {{data.1}}</button></h1>
+
+                        <h1><button name="option" value={{data.2}} class="button"> {{data.2}}</button></h1>
+
+                        <h1><button name="option" value=data.3 class="button"> {{data.3}}</button></h1>
+
+                        <h1> <button name="option" value=data.4 class="button"> {{data.4}}</button></h1>
+                        <h1> <button name="option" value=data.5 class="button"> {{data.5}}</button></h1>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+</html>
