@@ -1,46 +1,210 @@
 <html>
 
-<head>
-</head>
+
 <style>
-    * {
-        box-sizing: border-box;
-    }
+  * {
+    box-sizing: border-box;
+  }
 
 
 
-    .button {
+  .button {
 
-        border: none;
-        color: black;
-        background-color: lightblue;
-        margin-left: 40px;
-        margin-top: 10px;
-        padding: 15px 32px;
-        text-align: center;
+    border: none;
+    color: black;
+    background-color: lightblue;
+    margin-left: 40px;
+    margin-top: 10px;
+    padding: 15px 32px;
+    text-align: center;
 
-        font-size: 20px;
+    font-size: 20px;
 
-        align-self: right;
-    }
+    align-self: right;
+  }
 
-    .card {
-        margin-top: 100px;
-    }
+  .card {
+    margin-top: 100px;
+  }
+
+  body {
+    font-family: Tahoma, sans-serif;
+  }
+
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px;
+    /* Should be removed. Only for demonstration */
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 </style>
 
 
 </head>
 
 
-<body>
-    <center>
-        <div class="card">
-            <h1>LipReading Quiz</h1>
-            <a href="/quiz"><button class="button" type="button">START QUIZ</button></a>
-        </div>
-    </center>
+<head>
+  <title>Towards MOOCs for Lipreading</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body id="myPage">
+
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2"
+        href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+      <a href="https://cvit.iiit.ac.in/" class="w3-bar-item w3-button w3-teal"><i
+          class="fa fa-home w3-margin-right"></i><img src="quiz/media/cvit.jpeg"
+          style="height: 30px; width: 30px; margin: 0px;"></a>
+      <a href="http://cvit.iiit.ac.in/images/ConferencePapers/2022/Lipreading.pdf"
+        class="w3-bar-item w3-button w3-hide-small w3-hover-white">Paper</a>
+      <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a>
+      <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+      <a href="http://cvit.iiit.ac.in/images/ConferencePapers/2022/Lipreading.pdf"
+        class="w3-bar-item w3-button w3-hide-small w3-hover-white">Paper</a>
+      <a href="#team" class="w3-bar-item w3-button">Team</a>
+      <a href="#team" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+
+  <!-- Image Header -->
+  <div class="w3-display-container w3-animate-opacity">
+    <img src="quiz/media/cvit_banner.png" alt="boat" style="width:100%;min-height:350px;max-height:800px;">
+    <div class="w3-padding w3-display-middle w3-margin-bottom">
+      <center> <img src="quiz/media/wacv1.png" alt="wacv_logo" style="width:25%;height:25%"> </center>
+      <center style="margin-left:50px">
+        <h2><b>Towards MOOCs for Lipreading: Using Synthetic Talking Heads to Train Humans in Lipreading at Scale</b>
+        </h2>
+      </center>
+
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-teal w3-display-container">
+        <span onclick="document.getElementById('id01').style.display='none'"
+          class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
+        <h4>Oh snap! We just showed you a modal..</h4>
+        <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+      </header>
+      <div class="w3-container">
+        <p>Cool huh? Ok, enough teasing around..</p>
+        <p>Go to our <a class="w3-text-teal" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+      </div>
+      <footer class="w3-container w3-teal">
+        <p>Modal footer</p>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Team Container -->
+  <div class="row">
+    <div class="column" style="text-align:center;width:20%">
+      <a href="/quiz"><button onclick="document.getElementById('id01').style.display='block'"
+          class="w3-button w3-xlarge w3-theme w3-hover-teal" style="margin-top: 150px" ; title="Quiz">START
+          QUIZ</button></a>
+      <p><small> Agarwal,Aditya, Bipasha Sen, Rudrabha Mukhopadhyay, Vinay P. Namboodiri, and C. V. Jawahar. "Towards
+          MOOCs for Lipreading: Using Synthetic Talking Heads to Train Humans in Lipreading at Scale." In Proceedings of
+          the IEEE/CVF Winter Conference on Applications of Computer Vision, pp. 2217-2226. 2023. </small> </p>
+    </div>
+    <div class="column">
+
+      <video width="1500" height="500" style="border: 1px solid grey;" controls autoplay muted loop>
+        <source src="quiz/media/lipread.mp4" type="video/mp4">
+    </div>
+  </div>
+
+  <div class="w3-container w3-padding-64 w3-center" id="team">
+    <div class="column">
+
+    </div>
+
+    <div class="w3-row"><br>
+      <p>Meet the team </p>
+
+      <div class="w3-quarter" style="width:20% ;">
+        <img src="/quiz/media/aditya.jpeg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+        <h3>Agarwal,Aditya</h3>
+
+      </div>
+
+      <div class="w3-quarter" style="width:20%;">
+        <img src="/quiz/media/bipasha.jpeg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+        <h3>Bipasha Sen</h3>
+
+      </div>
+
+      <div class="w3-quarter" style="width:20% ;">
+        <img src="/quiz/media/ru.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+        <h3>Rudrabha Mukhopadhyay</h3>
+      </div>
+
+      <div class="w3-quarter" style="width:20% ;">
+        <img src="/quiz/media/vinay.jpeg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+        <h3>Vinay P. Namboodiri</h3>
+      </div>
+      <div class="w3-quarter" style="width:20% ;">
+        <img src="/quiz/media/cvj.jpeg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+        <h3>C. V. Jawahar</h3>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Work Row -->
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+    <p><span  > Contact Us: </span>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Center for Visual Information Technology,
+      International Institute of Information Technology,
+      Gachibowli, Hyderabad - 500 032,
+      Telangana, INDIA.
+      </p>
+      <p> <i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i> birjis.jameel@research.iiit.ac.in
+      </p>
+
+
+
+    <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+      <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+      <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+          <i class="fa fa-chevron-circle-up"></i></span></a>
+    </div>
+  </footer>
+
+
 
 </body>
+
 
 </html>

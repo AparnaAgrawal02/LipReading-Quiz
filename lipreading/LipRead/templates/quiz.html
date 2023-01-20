@@ -1,6 +1,11 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
     * {
@@ -56,39 +61,71 @@
 <body>
 
     <body>
+        <!-- Navbar -->
+        <div class="w3-top">
+            <div class="w3-bar w3-theme-d2 w3-left-align">
+                <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2"
+                    href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+                <a href="https://cvit.iiit.ac.in/" class="w3-bar-item w3-button w3-teal"><i
+                        class="fa fa-home w3-margin-right"></i><img src="media/cvit.jpeg"
+                        style="height: 30px; width: 30px; margin: 0px;"></a>
+                <a href="http://cvit.iiit.ac.in/images/ConferencePapers/2022/Lipreading.pdf"
+                    class="w3-bar-item w3-button w3-hide-small w3-hover-white">Paper</a>
+                    <a href="/"
+                    class="w3-bar-item w3-button w3-hide-small w3-hover-white">Restart</a>
+                    
 
+            </div>
 
-        <div1 class="header">
-            <h1>LipReading Quiz</h1>
-            <h2>Score {{data.6}}</h2>
+            <!-- Navbar on small screens -->
+            <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+                <a href="http://cvit.iiit.ac.in/images/ConferencePapers/2022/Lipreading.pdf"
+                    class="w3-bar-item w3-button w3-hide-small w3-hover-white">Paper</a>
+                    <a href="/"
+                    class="w3-bar-item w3-button w3-hide-small w3-hover-white">Restart</a>
+            </div>
+        </div>
 
-        </div1>
+        <!-- Image Header -->
+        <div class="w3-display-container w3-animate-opacity">
+            <img src="media/cvit_banner.png" alt="boat" style="width:100%;min-height:350px;max-height:400px;">
+            <div class="w3-padding w3-display-middle w3-margin-bottom">
+                <center> <img src="media/wacv1.png" alt="wacv_logo" style="width:70%;height:70%"> </center>
+                <center style="margin-left:50px">
+                    <h2><b>Lip Reading Quiz </b></h2>
+                </center>
+
+            </div>
+        </div>
+
 
         <div class="row">
+            <center>
+                <h2>Score {{data.6}}</h2>
+            </center>
             <div1 class="column">
-                <video width="500" height="500" controls autoplay muted>
+                <video width="1100" height="400" controls autoplay muted loop>
                     <source src={{data.0}} type="video/mp4">
 
                 </video>
             </div1>
-            <div class="column">
+            <div class="column" style="width:30%; margin-left:200px; ">
 
-                <div2 class="card">
-                    <form method="post">
-                        {% csrf_token %}
-                        <h2>Options</h2>
-
-                        <h1><button name="option" value={{data.1}} class="button"> {{data.1}}</button></h1>
-
-                        <h1><button name="option" value={{data.2}} class="button"> {{data.2}}</button></h1>
-
-                        <h1><button name="option" value=data.3 class="button"> {{data.3}}</button></h1>
-
-                        <h1> <button name="option" value=data.4 class="button"> {{data.4}}</button></h1>
-                        <h1> <button name="option" value=data.5 class="button"> {{data.5}}</button></h1>
+                <form method="post">
+                    {% csrf_token %}
 
 
+                    <h1><button name="option" value={{data.1}} class="button"> {{data.1}}</button></h1>
 
+                    <h1><button name="option" value={{data.2}} class="button"> {{data.2}}</button></h1>
+
+                    <h1><button name="option" value=data.3 class="button"> {{data.3}}</button></h1>
+
+                    <h1> <button name="option" value=data.4 class="button"> {{data.4}}</button></h1>
+                    <h1> <button name="option" value=data.5 class="button"> {{data.5}}</button></h1>
+
+
+                </form>
             </div>
 
 

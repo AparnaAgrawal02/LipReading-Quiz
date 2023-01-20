@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-zp_gscn$gbny(isu3_&10=egi()o-=80_j^pf)smk!cukcckl2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
         
 # Application definition
